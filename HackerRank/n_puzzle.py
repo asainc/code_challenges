@@ -67,7 +67,6 @@
 import heapq
 import sys
 
-# Directions for moving the blank (0)
 DIRS = {
     "UP":    (-1, 0),
     "DOWN":  (1, 0),
@@ -76,7 +75,6 @@ DIRS = {
 }
 
 def manhattan(board, k):
-    """Heuristic: Manhattan distance of all tiles."""
     dist = 0
     for i in range(k):
         for j in range(k):
@@ -133,9 +131,6 @@ def solve(board, k):
 
     return None
 
-# ---------------------------
-# Main Input / Output
-# ---------------------------
 data = sys.stdin.read().strip().split()
 k = int(data[0])
 
